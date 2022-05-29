@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25618ffedcf22824c9c045cf9de112b9, type: 3}
+  m_Name: TestWeapon
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 6442484796910290891, guid: 59c3514dc8b36734fabb71adb103f7f6, type: 3}
+  image: {fileID: -2700424241990515698, guid: 2b2019bb4b0c714459e0a153b62d5b9b, type: 3}
+  effect: {fileID: 7477609613596972544, guid: 39c6708ae5e8754499378bb5b037a6ac, type: 3}
+  cooldown: 0.22

@@ -7,9 +7,10 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     [SerializeField] Enamy target;
+    [SerializeField] Weapon weapon;
     [SerializeField] GameObject aim;
     [SerializeField] float distance;
-
+    float timeOfLastShot;
     public Enamy GetTarget()
     {
         return target;
@@ -80,5 +81,24 @@ public class Shooting : MonoBehaviour
     private void FixedUpdate()
     {
         Aiming();
+        if (timeOfLastShot >= 0)
+        {
+            if (Input.GetButton("Fire1"))
+            {
+                Shot();
+                timeOfLastShot -= weapon.Cooldown;
+            }
+        }
+        else
+        {
+            timeOfLastShot += Time.deltaTime;
+        }
+
+    }
+
+    public void Shot()
+    {
+        Instantiate(weapon.Effect, transform.position, Quaternion.identity);
+        weapon.Shot(transform);
     }
 }
