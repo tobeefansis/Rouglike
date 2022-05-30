@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5047276095519256449}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.0654, y: -0.3421, z: 0}
-  m_LocalScale: {x: 0.6249, y: 0.5883, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,12 +72,12 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -8343823161733178847, guid: 2b2019bb4b0c714459e0a153b62d5b9b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
+  m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -104,7 +104,7 @@ BoxCollider2D:
     oldSize: {x: 1, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
-    drawMode: 1
+    drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
@@ -124,3 +124,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: f1d2fa147a62f9f47bb1b16bd4fde3a1, type: 2}
   spriteRenderer: {fileID: 5047276095519256450}
+  offset: {x: 0, y: -0.68, z: 0}
+  jumpPower: 1
+  duration: 0.41

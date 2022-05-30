@@ -10,6 +10,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] SpriteRenderer weaponSpriteRender;
     [SerializeField] Weapon weapon;
     [SerializeField] GameObject aim;
+    bool isShooting;
     float timeOfLastShot;
 
     public Weapon Weapon { get => weapon; set => weapon = value; }
@@ -93,7 +94,7 @@ public class Shooting : MonoBehaviour
         Aiming();
         if (timeOfLastShot >= 0)
         {
-            if (Input.GetButton("Fire1"))
+            if (isShooting)
             {
                 Shot();
                 timeOfLastShot -= weapon.Cooldown;
@@ -110,5 +111,16 @@ public class Shooting : MonoBehaviour
     {
         Instantiate(weapon.Effect, weaponSpriteRender.transform.position, Quaternion.identity);
         weapon.Shot(weaponSpriteRender.transform);
+    }
+
+    public void StartShoting()
+    {
+        isShooting = true;
+    }
+
+    public void StopShoting()
+    {
+        isShooting = false;
+
     }
 }

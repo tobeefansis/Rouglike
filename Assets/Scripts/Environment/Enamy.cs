@@ -14,7 +14,7 @@ public class Enamy : MonoBehaviour
 
     private void OnDestroy()
     {
-        EnamyPool.Instance.Enamies.Remove(this);
+    
     }
     // Update is called once per frame
     void Update()
