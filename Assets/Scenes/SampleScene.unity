@@ -155,12 +155,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8447c0843dc36f4f8bb3df9cc970a46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  startValue: 0
-  effect: {fileID: 0}
-  OnDamageChange:
+  value: 40
+  startValue: 40
+  damageEffect: {fileID: 7019890536430729759, guid: 4b93cfa7931b63047bbab91ab4c8a574, type: 3}
+  onDamageChange:
     m_PersistentCalls:
       m_Calls: []
+  healthEffect: {fileID: 0}
 --- !u!114 &516313399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2443,7 +2444,6 @@ MonoBehaviour:
   weaponSpriteRender: {fileID: 630641847}
   weapon: {fileID: 11400000, guid: e2378b8d6bec28e48a485b4ff10cb72e, type: 2}
   aim: {fileID: 1150609051}
-  distance: 4.18
 --- !u!1 &1594015807
 GameObject:
   m_ObjectHideFlags: 0
@@ -2814,13 +2814,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1344876888180955424, guid: 26c335c797452594a9f9d8a941564423, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1357694089797710994, guid: 26c335c797452594a9f9d8a941564423, type: 3}
       propertyPath: m_Name
       value: Enamy
-      objectReference: {fileID: 0}
-    - target: {fileID: 1357694089797710995, guid: 26c335c797452594a9f9d8a941564423, type: 3}
-      propertyPath: startValue
-      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1357694089797710997, guid: 26c335c797452594a9f9d8a941564423, type: 3}
       propertyPath: m_RootOrder

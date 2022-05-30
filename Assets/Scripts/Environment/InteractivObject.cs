@@ -7,13 +7,14 @@ public class InteractivObject : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<PlayerHealth>())
+        var player = collision.GetComponent<PlayerHealth>();
+        if (player)
         {
             if (InteractivObjectSelector.InstanceExists)
             {
                 InteractivObjectSelector.Instance.Select(this);
             }
-            OnSelect();
+            OnSelect(player);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -26,7 +27,7 @@ public class InteractivObject : MonoBehaviour
             }
         }
     }
-    public virtual void OnSelect()
+    public virtual void OnSelect(PlayerHealth player)
     {
         print("OnSelect");
 
@@ -38,6 +39,6 @@ public class InteractivObject : MonoBehaviour
     }
     public virtual void OnUse()
     {
-
+        
     }
 }

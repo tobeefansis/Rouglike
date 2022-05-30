@@ -8,11 +8,12 @@ public class Health : MonoBehaviour
 {
     [SerializeField] int value;
     [SerializeField] int startValue;
-    [SerializeField] GameObject effect;
-    [SerializeField] UnityEvent OnDamageChange;
+    [SerializeField] GameObject damageEffect;
+    [SerializeField] UnityEvent onDamageChange;
 
     public int Value { get => value; set => this.value = value; }
     public int StartValue { get => startValue; set => startValue = value; }
+    public UnityEvent OnDamageChange { get => onDamageChange; set => onDamageChange = value; }
 
     public virtual void AddDamage(int damage)
     {
@@ -22,7 +23,7 @@ public class Health : MonoBehaviour
             Dead();
         }
         OnDamageChange?.Invoke();
-        Instantiate(effect, transform.position, Quaternion.identity);
+        Instantiate(damageEffect, transform.position, Quaternion.identity);
     }
 
     public virtual void Dead()
