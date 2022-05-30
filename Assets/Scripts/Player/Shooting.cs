@@ -10,7 +10,6 @@ public class Shooting : MonoBehaviour
     [SerializeField] SpriteRenderer weaponSpriteRender;
     [SerializeField] Weapon weapon;
     [SerializeField] GameObject aim;
-    [SerializeField] float distance;
     float timeOfLastShot;
 
     public Weapon Weapon { get => weapon; set => weapon = value; }
@@ -79,9 +78,9 @@ public class Shooting : MonoBehaviour
                 }
             }
         }
-        if (Vector2.Distance(transform.position, min.transform.position) <= distance)
-        {
 
+        if (min && Vector2.Distance(transform.position, min.transform.position) <= weapon.Distance)
+        {
             return min;
         }
         else
