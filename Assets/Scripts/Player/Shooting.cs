@@ -7,10 +7,14 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     [SerializeField] Enamy target;
+    [SerializeField] SpriteRenderer weaponSpriteRender;
     [SerializeField] Weapon weapon;
     [SerializeField] GameObject aim;
     [SerializeField] float distance;
     float timeOfLastShot;
+
+    public Weapon Weapon { get => weapon; set => weapon = value; }
+
     public Enamy GetTarget()
     {
         return target;
@@ -33,6 +37,13 @@ public class Shooting : MonoBehaviour
             }
         }
         target = value;
+    }
+
+    internal void SetWeapon(Weapon weapon)
+    {
+        this.weapon = weapon;
+        weaponSpriteRender.sprite = weapon.Image;
+        timeOfLastShot = 0;
     }
 
     void Aiming()
@@ -98,7 +109,7 @@ public class Shooting : MonoBehaviour
 
     public void Shot()
     {
-        Instantiate(weapon.Effect, transform.position, Quaternion.identity);
-        weapon.Shot(transform);
+        Instantiate(weapon.Effect, weaponSpriteRender.transform.position, Quaternion.identity);
+        weapon.Shot(weaponSpriteRender.transform);
     }
 }
