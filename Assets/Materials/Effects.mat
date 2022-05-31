@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bullets
+  m_Name: Effects
   m_Shader: {fileID: -6465566751694194690, guid: b18f517cd70dc5c4bbc528c12b6addb0, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,11 +20,27 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_a3fad4623a3f4bdd98513d958e603780:
-        m_Texture: {fileID: 2800000, guid: 4ef1529f9315a5640ab5e60f646418a5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1124e8e01d88eca43bb9223f3969893c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_efa5bbc94d024da3985d03b5f3590448:
-        m_Texture: {fileID: 2800000, guid: cd30dd35375d8f546aed5f82e1f84d81, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1124e8e01d88eca43bb9223f3969893c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -39,7 +55,11 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
+    m_Floats:
+    - _EnableExternalAlpha: 0
     m_Colors:
-    - Color_f1f9eb1fde794741aabab732dc2db8d7: {r: 0.2688679, g: 1, b: 0.9823823, a: 0}
+    - Color_f1f9eb1fde794741aabab732dc2db8d7: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
