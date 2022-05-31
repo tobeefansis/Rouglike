@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu]
 public class Weapon : ScriptableObject
@@ -18,6 +16,7 @@ public class Weapon : ScriptableObject
 
     public void Shot(Transform gun)
     {
-        Instantiate(Bullet, gun.position, gun.rotation);
+        Instantiate(bullet, gun.position, gun.rotation);
+        Instantiate(effect, gun.position, gun.rotation);
     }
 }

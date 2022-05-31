@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -18,7 +15,7 @@ public class Health : MonoBehaviour
     public virtual void AddDamage(int damage)
     {
         value -= damage;
-        if (value<=0)
+        if (value <= 0)
         {
             Dead();
         }

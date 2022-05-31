@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 
 using UnityEngine;
 
@@ -34,11 +32,11 @@ public class InteractivObject : MonoBehaviour
     }
     public virtual void OnDiselect()
     {
-        print("OnDiselect");
+        //   print("OnDiselect");
 
     }
     public virtual void OnUse()
     {
-        
+
     }
 }

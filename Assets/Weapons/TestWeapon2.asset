@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25618ffedcf22824c9c045cf9de112b9, type: 3}
   m_Name: TestWeapon2
   m_EditorClassIdentifier: 
-  bullet: {fileID: 7769861603737679310, guid: 02aaf028389623648a8f5f7791d0a0e7, type: 3}
+  bullet: {fileID: 8901517681169848048, guid: 3ba8624d50a19e44b82f5d8d1687e488, type: 3}
   image: {fileID: 4955124197649223790, guid: 2b2019bb4b0c714459e0a153b62d5b9b, type: 3}
   effect: {fileID: 7477609613596972544, guid: 39c6708ae5e8754499378bb5b037a6ac, type: 3}
   cooldown: 1.23

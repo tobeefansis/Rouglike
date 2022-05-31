@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 
 using UnityEngine;
 
@@ -97,7 +94,7 @@ public class Shooting : MonoBehaviour
             if (isShooting)
             {
                 Shot();
-                timeOfLastShot -= weapon.Cooldown;
+                timeOfLastShot = -weapon.Cooldown;
             }
         }
         else
@@ -109,7 +106,6 @@ public class Shooting : MonoBehaviour
 
     public void Shot()
     {
-        Instantiate(weapon.Effect, weaponSpriteRender.transform.position, Quaternion.identity);
         weapon.Shot(weaponSpriteRender.transform);
     }
 

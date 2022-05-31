@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHealth : Health
@@ -10,11 +7,15 @@ public class PlayerHealth : Health
     public void AddHealth(int value)
     {
         this.Value += value;
-        if (Value>StartValue)
+        if (Value > StartValue)
         {
             Value = StartValue;
         }
-        Instantiate(healthEffect, transform.position, Quaternion.identity);
+        Instantiate(healthEffect, transform.position, Quaternion.identity, transform);
         OnDamageChange?.Invoke();
+    }
+    public override void Dead()
+    {
+        Debug.Log("Dead");
     }
 }
