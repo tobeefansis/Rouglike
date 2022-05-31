@@ -64,4 +64,13 @@ public class Enamy : MonoBehaviour
 
         weapon.Shot(weaponImage.transform);
     }
+    private void OnDestroy()
+    {
+        if (EnamyPool.InstanceExists)
+        {
+            EnamyPool.Instance.Enamies.Remove(this);
+            EnamyPool.Instance.Enamies.Remove(null);
+        }
+    }
+    
 }

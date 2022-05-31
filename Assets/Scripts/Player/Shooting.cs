@@ -19,18 +19,16 @@ public class Shooting : MonoBehaviour
 
     public void SetTarget(Enamy value)
     {
+        if (value == null)
+        {
+            aim.SetActive(false);
+        }
         if (target != value)
         {
-            if (value == null)
-            {
-                aim.transform.SetParent(null);
-                aim.SetActive(false);
-            }
-            else
+            if (value != null)
             {
                 aim.SetActive(true);
                 aim.transform.position = value.transform.position;
-                aim.transform.SetParent(value.transform);
             }
         }
         target = value;
@@ -49,9 +47,11 @@ public class Shooting : MonoBehaviour
         if (target)
         {
             transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, Mathf.Atan2(GetTarget().transform.position.y - transform.position.y, GetTarget().transform.position.x - transform.position.x) * Mathf.Rad2Deg - 90);
+            aim.transform.position = target.transform.position;
         }
         else
         {
+
             transform.rotation = Quaternion.identity;
         }
     }
@@ -63,6 +63,10 @@ public class Shooting : MonoBehaviour
         {
             foreach (var item in EnamyPool.Instance.Enamies)
             {
+                if (!item)
+                {
+                    continue;
+                }
                 if (min)
                 {
                     if (Vector2.Distance(transform.position, min.transform.position) > Vector2.Distance(transform.position, item.transform.position))
